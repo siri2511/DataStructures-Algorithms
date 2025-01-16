@@ -1,0 +1,70 @@
+package com.dsa.sorting;
+
+import java.util.Scanner;
+class MinHeap{
+	int[] arr;
+	int size;
+	MinHeap(int[] arr){
+		this.arr = arr;
+		size = arr.length;
+		buildHeap();
+	}
+	void buildHeap() {
+		for(int i=size/2-1;i>=0;i--) {
+			heapify(i);		
+		}
+	}
+	void heapify(int root_index) {
+		int min_index=root_index;
+		int child=root_index*2+1;
+		if(child<size) {
+			if(arr[child]<arr[min_index]) {
+				min_index=child;
+			}
+		}
+		if(child+1<size) {
+			if(arr[child+1]<arr[min_index]) {
+				min_index=child+1;
+			}
+		}
+		swap(arr, min_index, root_index);
+		if(root_index!=min_index) {
+			heapify(min_index);
+		}
+	}
+	void swap(int[] arr, int a, int b) {
+		int temp=arr[a];
+		arr[a]=arr[b];
+		arr[b]=temp;
+	}
+	int extractRoot() {
+		int min=arr[0];
+		arr[0]=arr[--size];
+		heapify(0);
+		return min;
+	}
+	int getSize() {
+		return size;
+	}
+}
+
+public class MinHeapSort {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		//scan size of array
+		int n = sc.nextInt();
+		int[] arr = new int[n];
+		//scan elements of array
+		for(int i=0; i<n; i++) {
+			arr[i] = sc.nextInt();
+		}
+		sc.close();
+		MinHeap h = new MinHeap(arr);
+		for(int k=0; k<arr.length && h.getSize()>0; k++) {
+			arr[k]=h.extractRoot();
+		}
+		for(int num: arr) {
+			System.out.print(num+" ");
+		}
+	}
+}
