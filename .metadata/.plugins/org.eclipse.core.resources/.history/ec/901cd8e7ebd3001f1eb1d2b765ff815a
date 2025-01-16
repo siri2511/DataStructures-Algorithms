@@ -1,0 +1,29 @@
+package com.dsa.sorting;
+
+import java.util.Scanner;
+
+public class MergeSort {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		//scan number of elements in array
+		int n = sc.nextInt();
+		int[] arr = new int[n];
+		//scan elements of array
+		for(int i=0; i<n; i++) {
+			arr[i]=sc.nextInt();
+		}
+		sc.close();
+		mergeSort(arr, left, right);
+	}
+	public static void mergeSort(int[] arr, int left, int right) {
+		if(left<right) {
+		int median = (left+right)/2;
+		mergeSort(arr, left, median);
+		mergeSort(arr, median+1, right);
+		merge(arr,left,median,right);
+		}
+	}
+	public static void merge(int[] arr, int median, int left, int right) {
+		
+	}
+}

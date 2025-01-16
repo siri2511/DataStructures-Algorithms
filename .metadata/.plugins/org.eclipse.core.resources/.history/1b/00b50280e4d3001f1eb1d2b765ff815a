@@ -1,0 +1,36 @@
+package com.dsa.sorting;
+
+import java.util.Scanner;
+
+public class QuickSort {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		//scan number of elements in array
+		int n = sc.nextInt();
+		int[] arr = new int[n];
+		//scan elements of array
+		for(int i=0; i<n; i++) {
+			arr[i]=sc.nextInt();
+		}
+		sc.close();
+		quickSort(arr,arr[0],arr[n-1]);
+	}
+	public static void quickSort(int[] arr, int low,int high) {
+		int pivot= high;
+		int i=-1;
+		int temp=0;
+		for(int j=low; j<high; j++) {
+			if(arr[j]<pivot) {
+				i++;
+				temp=arr[i];
+				arr[i]=arr[j];
+				arr[j]=temp;
+			}
+		}
+		temp=arr[high];
+		arr[high]=arr[i+1];
+		arr[i+1]=temp;	
+		quickSort(arr, low, i);
+		quickSort(arr, i+2, high);
+	}
+}

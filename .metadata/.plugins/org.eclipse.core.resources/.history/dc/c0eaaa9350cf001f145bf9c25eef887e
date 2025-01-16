@@ -1,0 +1,35 @@
+package com.dsa.sorting;
+
+import java.util.Scanner;
+
+public class SelectionSort {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		//scan size of array
+		int n = sc.nextInt();
+		int arr[] = new int[n];
+		//scan elements of array
+		for(int i=0; i<n; i++) {
+			arr[i]=sc.nextInt();
+		}
+		sc.close();
+		
+	}
+	public static void selectionSort(int[] arr) {
+		int temp=0;
+		for(int i=0; i<arr.length ; i++) {
+			int max=0;
+			int j=0;
+			for(j=0; j<arr.length-i-1; j++) {
+				if(arr[max]<arr[j]) {
+					max=j;					
+				}
+			}
+			//perform swapping
+			
+			temp=arr[max];
+			arr[max]=arr[j];
+			arr[j]=temp;
+		}
+	}
+}
