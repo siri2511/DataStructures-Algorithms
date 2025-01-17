@@ -118,10 +118,9 @@ public class DoublyLinkedList {
 			System.out.print(n.data+" ");
 			n=n.prev;
 		}
-		System.out.println();
 	}
 	
-	public int search(int target) {
+	public return search(int target) {
 		int index=0;
 		Node n = head;
 		while(n!=null) {
@@ -131,6 +130,5 @@ public class DoublyLinkedList {
 			index++;
 			n=n.next;
 		}
-		return -1;
 	}
 }

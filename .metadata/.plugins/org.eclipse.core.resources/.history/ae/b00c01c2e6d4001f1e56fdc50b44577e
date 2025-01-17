@@ -19,6 +19,5 @@ public static void main(String[] args) {
 	
 	System.out.println("Current head: "+list.head());
 	list.reverseTraversal();
-	System.out.println("Element 10 found at index: "+list.search(10));
 }
 }

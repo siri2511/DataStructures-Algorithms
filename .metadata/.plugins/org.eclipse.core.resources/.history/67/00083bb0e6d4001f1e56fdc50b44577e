@@ -118,19 +118,5 @@ public class DoublyLinkedList {
 			System.out.print(n.data+" ");
 			n=n.prev;
 		}
-		System.out.println();
-	}
-	
-	public int search(int target) {
-		int index=0;
-		Node n = head;
-		while(n!=null) {
-			if(n.data==target) {
-				return index;
-			}
-			index++;
-			n=n.next;
-		}
-		return -1;
 	}
 }
