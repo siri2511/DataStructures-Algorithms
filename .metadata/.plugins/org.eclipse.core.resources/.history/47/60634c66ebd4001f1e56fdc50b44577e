@@ -1,0 +1,13 @@
+package com.dsa.datastructures.circularsinglylinkedlist;
+
+public class Test {
+	public static void main(String[] args) {
+		CircularSingleList list = new CircularSingleList();
+		list.insert(8);
+		list.insert(10);
+		list.insertAtStart(6);
+		list.show();
+		list.insert(12);
+		System.out.println("current head: "+list.head());
+	}
+}

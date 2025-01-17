@@ -1,0 +1,55 @@
+package com.dsa.datastructures.circularsinglylinkedlist;
+
+public class CircularSingleList {
+	Node head;
+	Node tail;
+	
+	//insert node at end
+	public void insert(int data) {
+		Node node = new Node();
+		node.data=data;
+		if(head==null) {
+			head=node;
+			tail=node;
+			node.next=head;
+		}
+		else {
+			tail.next=node;
+			node.next=head;
+			tail=node;
+		}
+	}
+	
+	//insert node at start
+	public void insertAtStart(int data) {
+		Node node = new Node();
+		node.data=data;
+		if(tail==null) {
+			head=node;
+			tail=node;
+			node.next=head;
+		}
+		else {
+			node.next=tail.next;
+			tail.next=node;
+//			head=node;
+		}
+	}
+	public void show() {
+		Node curr = head;
+		if(head==null) {
+			System.out.println("List is empty");
+		}
+		else {
+			do {
+				System.out.print(curr.data+" ");
+				curr=curr.next;
+			}while(curr!=head);
+			System.out.println();
+		}
+	}
+	
+	public int head() {
+		return head.data;
+	}
+}
