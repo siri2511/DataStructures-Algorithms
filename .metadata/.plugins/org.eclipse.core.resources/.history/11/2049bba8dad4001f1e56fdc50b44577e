@@ -1,0 +1,64 @@
+package com.dsa.datastructures.doublylinkedlist;
+
+public class DoublyLinkedList {
+	Node head;
+	public void insertAtStart(int data) {
+		Node node = new Node();
+		node.data=data;
+		node.prev=null;
+		node.next=null;
+		
+		if(head==null) {
+			head=node;
+		}
+		else {
+			head.prev=node;
+			node.next=head;
+			head=node;
+		}
+	}
+	
+	public void insert(int data) {
+		Node n = new Node();
+		Node curr = head;
+		n.data=data;
+		n.prev=null;
+		n.next=null;
+		if(head==null) {
+			head=n;
+		}
+		else {
+		while(curr.next!=null) {
+			curr=curr.next;
+		}
+		curr.next=n;
+		n.prev=curr;
+		}
+	}
+	
+	public void insertAt(int index, int data) {
+		Node node = new Node();
+		node.data=data;
+		node.prev=null;
+		node.next=null;
+		Node curr = head;
+		for(int i=0; i<index-1;i++) {
+			curr=curr.next;
+		}
+		node.prev=curr;
+		node.next=curr.next;
+		curr.next=node;
+	}
+	public int head() {
+		return head.data;
+	}
+	
+	public void show() {
+		Node n = head;
+		while(n!=null) {
+			System.out.print(n.data+" ");
+			n=n.next;
+		}
+		System.out.println();
+	}
+}

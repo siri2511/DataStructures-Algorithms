@@ -1,0 +1,12 @@
+package com.dsa.datastructures.doublylinkedlist;
+
+public class Test {
+public static void main(String[] args) {
+	DoublyLinkedList list = new DoublyLinkedList();
+	list.insert(10);
+	list.insert(12);
+	list.insertAtStart(8);
+	list.show();
+	System.out.println("Current head: "+list.head());
+}
+}
