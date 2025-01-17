@@ -1,0 +1,25 @@
+package com.dsa.datastrcutures.circulardoublylinkedlist;
+
+public class CircularDoubleList {
+	Node head;
+	Node tail;
+	
+	//insert at Start
+	public void insertAtStart(int data) {
+		Node node = new Node();
+		node.data=data;
+		if(head==null) {
+			node.next=node.prev=node;
+			head=node;
+		}
+		else {
+			tail=head.prev;
+			node.next=head;
+			node.prev=tail;
+			head.prev=node;
+			tail.next=node;
+			head=node;
+		}
+	}
+
+}
