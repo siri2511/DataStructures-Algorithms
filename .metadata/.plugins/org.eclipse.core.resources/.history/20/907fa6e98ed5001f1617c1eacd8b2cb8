@@ -1,0 +1,32 @@
+package com.dsa.datastructures.queue.flatarray;
+
+public class Queue {
+	int n=5;
+	int[] queue = new int[n];
+	int size;
+	int front=0;
+	int rear=0;
+	
+	//insert value into queue: enqueue
+	public void enqueue(int data) {
+		queue[rear]=data;
+		rear=(rear+1)%5;
+		size++;
+	}
+	
+	//delete elements from stack: dequeue
+	public int dequeue() {
+		int data= queue[front];
+		front=(front+1)%5;
+		size--;
+		return data;
+	}
+	
+	//display elements of the queue
+	public void show() {
+		for(int i=0; i<size; i++) {
+			System.out.print(queue[(front+i)%5]+" ");
+		}
+		System.out.println();
+	}
+}
