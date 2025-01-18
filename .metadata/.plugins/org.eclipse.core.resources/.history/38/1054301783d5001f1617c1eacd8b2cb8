@@ -1,0 +1,44 @@
+package com.dsa.stackDemo;
+
+public class Stack {
+//	Stack(int n){
+//		this.size=n;
+//	}
+	int size=5;
+	int[] stack = new int[size];
+	int top=-1;
+	public void push(int data) {
+		stack[++top]=data;
+	}
+	
+	public int pop() {
+		int data;
+		data= stack[top];
+		stack[top]=0;
+		top--;
+		return data;
+	}
+	
+	public int peek() {
+		return stack[top];
+	}
+	public void show() {
+		for(int n : stack) {
+			System.out.print(n+" ");
+		}
+		System.out.println();
+	}
+	
+	public int getSize() {
+		return top+1;
+	}
+	
+	public boolean isEmpty() {
+		return top==-1;
+	}
+	
+	public boolean isFull() {
+		return top==capacity-1;
+	}
+	
+}

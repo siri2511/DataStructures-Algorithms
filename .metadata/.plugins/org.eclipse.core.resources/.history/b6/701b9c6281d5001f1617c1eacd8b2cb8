@@ -1,0 +1,18 @@
+package com.dsa.stackDemo;
+
+//import java.util.Scanner;
+
+public class Test {
+	public static void main(String[] args) {
+//		Scanner sc = new Scanner(System.in);
+//		//scan size of stack
+//		int n = sc.nextInt();
+//		sc.close();
+		Stack stack = new Stack();
+		stack.push(6);
+		stack.push(8);
+		stack.push(11);
+		stack.pop();
+		stack.show();
+	}
+}

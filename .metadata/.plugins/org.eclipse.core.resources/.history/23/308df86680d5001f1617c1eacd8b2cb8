@@ -1,0 +1,12 @@
+package com.dsa.stackDemo;
+
+public class Stack {
+	int size;
+	Stack(int n){
+		this.size=n;
+	}
+	int[] stack = new int[size];
+	public void push(int data) {
+		
+	}
+}
