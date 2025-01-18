@@ -1,0 +1,7 @@
+package com.dsa.datastructures.tree.binarysearchtree;
+
+public class Node {
+	int data;
+	Node right;
+	Node left;
+}
