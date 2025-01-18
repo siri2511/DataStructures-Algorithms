@@ -1,0 +1,5 @@
+package com.dsa.datastructures.stack.linkedlist;
+
+public class Node {
+
+}
