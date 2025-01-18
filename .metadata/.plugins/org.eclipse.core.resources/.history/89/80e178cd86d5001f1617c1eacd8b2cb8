@@ -1,0 +1,7 @@
+package com.dsa.datastructures.dynamicstack;
+
+public class Test {
+	public static void main(String[] args) {
+		
+	}
+}
