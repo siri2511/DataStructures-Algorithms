@@ -21,15 +21,10 @@ public class Stack {
 	
 	//delete the last element of the stack
 	public int pop() {
-		int data=-1;
-		if(isEmpty()) {
-			System.out.println("Stack is empty");
-		}
-		else {
+		int data;
 		data= stack[top];
 		stack[top]=0;
 		top--;
-		}
 		return data;
 	}
 	

@@ -12,14 +12,14 @@ public class Test {
 		stack.push(6);
 		stack.push(8);
 		stack.push(11);
-		System.out.println(stack.pop());
+//		System.out.println(stack.pop());
 		stack.push(10);
-//		stack.push(12);
-//		stack.push(14);
-		System.out.println(stack.peek());
-		stack.show();
-		System.out.println("Is the Stack Empty: "+stack.isEmpty());
-		System.out.println("Is the Stack Full: "+stack.isFull());
-		System.out.println("The size of the Stack: "+stack.getSize());
+		stack.push(12);
+		stack.push(14);
+//		System.out.println(stack.peek());
+//		stack.show();
+//		System.out.println("Is the Stack Empty: "+stack.isEmpty());
+//		System.out.println("Is the Stack Full: "+stack.isFull());
+//		System.out.println("The size of the Stack: "+stack.getSize());
 	}
 }

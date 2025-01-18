@@ -21,7 +21,7 @@ public class Stack {
 	
 	//delete the last element of the stack
 	public int pop() {
-		int data=-1;
+		int data;
 		if(isEmpty()) {
 			System.out.println("Stack is empty");
 		}

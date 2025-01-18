@@ -10,26 +10,20 @@ public class Stack {
 	
 	//insert an element into the stack
 	public void push(int data) {
-		++top;
 		if(top>size-1) {
 			System.out.println("Stack is full");
 		}
 		else {
-		stack[top]=data;
+		stack[++top]=data;
 		}
 	}
 	
 	//delete the last element of the stack
 	public int pop() {
-		int data=-1;
-		if(isEmpty()) {
-			System.out.println("Stack is empty");
-		}
-		else {
+		int data;
 		data= stack[top];
 		stack[top]=0;
 		top--;
-		}
 		return data;
 	}
 	
